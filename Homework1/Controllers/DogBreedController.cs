@@ -23,21 +23,21 @@ namespace DogBreeds.Controllers
         public async Task<DogBreed> GetDogBreedById(int id) => await _unitOfWork.Repository.GetById(id);
 
         [HttpPost]
-        public async Task AddFaculty([FromBody] DogBreed dogBreed)
+        public async Task AddDogBreed([FromBody] DogBreed dogBreed)
         {
             _unitOfWork.Repository.Insert(dogBreed);
             await _unitOfWork.Save();
         }
 
         [HttpPut("{id}")]
-        public async Task UpdateFaculty(int id, [FromBody] DogBreed dogBreed)
+        public async Task UpdateDogBreed(int id, [FromBody] DogBreed dogBreed)
         {
             _unitOfWork.Repository.Update(id, dogBreed);
             await _unitOfWork.Save();
         }
 
         [HttpDelete("{id}")]
-        public async Task DeleteFaculty(int id) 
+        public async Task DeleteDogBreed(int id) 
         { 
             _unitOfWork.Repository.Delete(id);
             await _unitOfWork.Save();
