@@ -1,0 +1,209 @@
+<div class="container">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label class="" for="id">Id</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="number"
+                class="form-control"
+                id="id"
+                [(ngModel)]="dogBreed.id"
+                name="id"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label class="" for="breed">Breed</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                class="form-control"
+                id="breed"
+                [(ngModel)]="dogBreed.breed"
+                name="breed"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                [(ngModel)]="dogBreed.country"
+                name="country"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label for="averageAge">Average Age</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averageAge"
+                [(ngModel)]="dogBreed.averageAge"
+                name="averageAge"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="averageWeight">Average Weight</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averageWeight"
+                [(ngModel)]="dogBreed.averageWeight"
+                name="averageWeight"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="unitOfWeight">Unit Of Weight</label>
+            </div>
+            <div class="col-75">
+                <input
+                type= "text"
+                class="form-control"
+                id="unitOfWeight"
+                [(ngModel)]="dogBreed.unitOfWeight"
+                name="unitOfWeight"
+                />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="averageHeight">Average Height</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averageHeight"
+                [(ngModel)]="dogBreed.averageHeight"
+                name="averageHeight"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label for="unitOfHeight">Unit Of Height</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "text"
+                class="form-control"
+                id="unitOfHeight"
+                [(ngModel)]="dogBreed.unitOfHeight"
+                name="unitOfHeight"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="hairLenght">Hair Lenght</label></div>
+            <div class="col-75">
+              <input
+                type= "text"
+                class="form-control"
+                id="hairLenght"
+                [(ngModel)]="dogBreed.hairLenght"
+                name="hairLenght"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="averagePrice">Average Price</label></div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averagePrice"
+                [(ngModel)]="dogBreed.averagePrice"
+                name="averagePrice"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="unitOfPrice">Unit Of Price</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "text"
+                class="form-control"
+                id="unitOfPrice"
+                [(ngModel)]="dogBreed.unitOfPrice"
+                name="unitOfPrice"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="picture">Picture</label>
+            </div>
+            <div class="col-75">
+                <input
+                type= "text"
+                class="form-control"
+                id="picture"
+                [(ngModel)]="dogBreed.picture"
+                name="picture"
+              />
+            </div>
+          </div>
+        </div>
+          
+        <div class="pos">
+          <button  (click)="saveDogBreed()" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+  
+      <div *ngIf="submitted">
+        <div class="pos">
+          <h2><strong>You submitted successfully!</strong></h2>
+          <button class="btn btn-success" (click)="newDogBreed()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  

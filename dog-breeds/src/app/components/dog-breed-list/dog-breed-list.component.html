@@ -1,0 +1,39 @@
+  <div  *ngIf="!detailed">
+    <div style="padding: 13px;">
+      <mat-spinner *ngIf="dogBreeds.length === 0"></mat-spinner>
+
+      <mat-card *ngFor="let dogbreed of dogBreeds" style="margin-top:10px;">
+        <mat-card-header>
+            <mat-card-title>{{dogbreed.breed}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img style="height:30%; width: 30%;" src="{{ dogbreed.picture }}" />
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="setActiveDogBreed(dogbreed)"> Details</button>
+        </mat-card-actions>
+      </mat-card>
+  </div>
+</div>
+
+<div *ngIf="detailed">
+  <div *ngIf="currentDogBreed">
+    <mat-card-header>
+    <mat-card-title style="padding-top: 20px;">{{currentDogBreed.breed}}</mat-card-title>
+    <mat-card-subtitle>{{currentDogBreed.country}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img class="one-img" src="{{ currentDogBreed.picture }}" /> 
+      <p><strong>Average Age:</strong> {{currentDogBreed.averageAge}}</p>
+      <p><strong>Hair Lenght:</strong> {{currentDogBreed.hairLenght}}</p>
+      <p><strong>Average Weight:</strong> {{currentDogBreed.averageWeight}} {{currentDogBreed.unitOfWeight}}</p>
+      <p><strong>Average Height:</strong> {{currentDogBreed.averageHeight}} {{currentDogBreed.unitOfHeight}}</p>
+      <p><strong>Average Price:</strong> {{currentDogBreed.averagePrice}} {{currentDogBreed.unitOfPrice}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button style="background-color:rgb(238, 238, 190)" routerLink="/DogBreed/{{ currentDogBreed.id }}"> Update</button>
+      <button mat-button style="background-color: rgb(230, 176, 176);" (click)="deleteDogBreed()"> Delete</button>
+      <button mat-button style="background-color:rgb(176, 191, 235)" (click)="refreshList()" routerLink="/DogBreed"> Back to list</button>
+    </mat-card-actions>
+  </div>
+</div>

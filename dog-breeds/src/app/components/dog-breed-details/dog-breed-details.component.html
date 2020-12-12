@@ -1,0 +1,206 @@
+<div class="container">
+    <div *ngIf="!updated">
+      <div *ngIf="currentDogBreed" class="edit-form">
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label class="" for="id">Id</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="number"
+                class="form-control"
+                id="id"
+                [(ngModel)]="currentDogBreed.id"
+                name="id"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label class="" for="breed">Breed</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                class="form-control"
+                id="breed"
+                [(ngModel)]="currentDogBreed.breed"
+                name="breed"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                [(ngModel)]="currentDogBreed.country"
+                name="country"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label for="averageAge">Average Age</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averageAge"
+                [(ngModel)]="currentDogBreed.averageAge"
+                name="averageAge"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="averageWeight">Average Weight</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averageWeight"
+                [(ngModel)]="currentDogBreed.averageWeight"
+                name="averageWeight"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="unitOfWeight">Unit Of Weight</label>
+            </div>
+            <div class="col-75">
+                <input
+                type= "text"
+                class="form-control"
+                id="unitOfWeight"
+                [(ngModel)]="currentDogBreed.unitOfWeight"
+                name="unitOfWeight"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="averageHeight">Average Height</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averageHeight"
+                [(ngModel)]="currentDogBreed.averageHeight"
+                name="averageHeight"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25"> 
+              <label for="unitOfHeight">Unit Of Height</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "text"
+                class="form-control"
+                id="unitOfHeight"
+                [(ngModel)]="currentDogBreed.unitOfHeight"
+                name="unitOfHeight"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="hairLenght">Hair Lenght</label></div>
+            <div class="col-75">
+              <input
+                type= "text"
+                class="form-control"
+                id="hairLenght"
+                [(ngModel)]="currentDogBreed.hairLenght"
+                name="hairLenght"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="averagePrice">Average Price</label></div>
+            <div class="col-75">
+              <input
+                type= "number"
+                class="form-control"
+                id="averagePrice"
+                [(ngModel)]="currentDogBreed.averagePrice"
+                name="averagePrice"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+            <label for="unitOfPrice">Unit Of Price</label>
+            </div>
+            <div class="col-75">
+              <input
+                type= "text"
+                class="form-control"
+                id="unitOfPrice"
+                [(ngModel)]="currentDogBreed.unitOfPrice"
+                name="unitOfPrice"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-25">
+              <label for="picture">Picture</label>
+            </div>
+            <div class="col-75">
+                <input
+                type= "text"
+                class="form-control"
+                id="picture"
+                [(ngModel)]="currentDogBreed.picture"
+                name="picture"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row pos">
+          <button class="btn" (click)="updateDogBreed()">Update</button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div *ngIf="updated">
+      <h2><strong>{{ message }}</strong></h2>
+      <button class="btn" (click) = "getCurrentDogBreed(currentDogBreed)">Update Again</button>
+    </div>
+  </div>
