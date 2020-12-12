@@ -1,5 +1,7 @@
 # DogsBreeds
 
+# Please be aware that this project uses an existing API, which should be run on localhost. To prevent any issues with API URL please before running angular project change the port of API URL in the file dogs-breeds/src/app/services/dog-breed.service.ts.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
 ## Development server
